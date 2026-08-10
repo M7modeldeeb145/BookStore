@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="BookStore.API/BookStore.API.csproj" />
+  <Project Path="BookStore.Application/BookStore.Application.csproj" />
+  <Project Path="BookStore.Domain/BookStore.Domain.csproj" />
+  <Project Path="BookStore.Infrastructure/BookStore.Infrastructure.csproj" />
+  <Project Path="BookStore.Presistance/BookStore.Presistance.csproj" />
+</Solution>
