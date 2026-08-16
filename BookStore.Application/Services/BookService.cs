@@ -386,6 +386,18 @@ namespace BookStore.Application.Services
                     };
                 }
 
+                // Do not increase available copies beyond total copies
+                if (book.AvailableCopies >= book.TotalCopies)
+                {
+                    return new ResponseResult
+                    {
+                        Result = Result.Success,
+                        Code = 200,
+                        MessageEn = "All copies are already available",
+                        MessageAr = "جميع النسخ متوفرة بالفعل"
+                    };
+                }
+
                 book.AvailableCopies = book.AvailableCopies + 1;
                 _uow.Repository<Book>().Update(book);
                 var result = await _uow.SaveAsync();
